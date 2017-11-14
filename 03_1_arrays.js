@@ -39,7 +39,7 @@ var elimino = arr.pop(); // elimina ultima posicion
 console.log(arr, elimino); // (6) ["0", "1", "2", "3", "4", "5"] "6"
 
 
-arr.splice(1, 3); // En la pos 1 elimina 1 elemento
+arr.splice(1, 3); // En la pos 1 elimina 3 elemento
 console.log(arr); // (3) ["0", "4", "5"]
 
 
@@ -49,6 +49,6 @@ console.log(arr); // (3) ["0", "4", "5"]
 arr.splice(1, 2, "10", "20", "30"); // En la pos 1 elimina 2 elemento y pon un "10"
 console.log(arr); // (3) ["0", "4", "5"]
 
-
-
+arr = arr.slice(0, 2) // Corta desde 0 hasta el pos 2(sin contarlo)
+console.log(arr);
 

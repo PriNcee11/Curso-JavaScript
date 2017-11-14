@@ -1,15 +1,15 @@
 var a = 1;
 var b = 'Iván';
 
-console.log("a = " + a);
+console.log("a = " + a); // a = 1
 console.info("a = " + a);
 console.warn("a = " + a);
 console.error("a = " + a);
 
-console.log(a+b); // number + string -> concatena
+console.log(a+b); // 1Iván number + string -> concatena
 
-console.log(undefined === null);
-console.log(undefined == null);
+console.log(undefined === null); // false
+console.log(undefined == null); // true
 
 function imprimir(){
 	for(var i=0; i<8000; i++){
@@ -24,4 +24,4 @@ function clickButton(){
 	console.log("Click en botón");
 }
 
-imprimir();
+/* imprimir(); */

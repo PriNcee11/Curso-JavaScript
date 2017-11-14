@@ -1,5 +1,5 @@
-var a = 10;
-var b = a;
+var b = a = 10;
+/* var b = a; */
 
 /* En caso de las variables, son primitivos y siempre pasan por VALOR, con distintos espacios de memoria */
 console.log("a: ", a); //10
