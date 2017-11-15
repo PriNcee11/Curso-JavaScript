@@ -1,4 +1,6 @@
-
+/**
+ * OBJETO NUMBER
+ */
 var a = 10;
 var b = Number(10);
 
@@ -39,6 +41,55 @@ console.log( n ); // Number {[[PrimitiveValue]]: 20}
 console.log( n.valueOf() ); // 20
 
 
+
+/**
+ * OBJETO BOOLEAN
+ */
+
+var a = true;
+var b = false;
+
+var a = new Boolean();
+console.log( a ); // Boolean {[[PrimitiveValue]]: false}
+
+var a = new Boolean("-2");
+console.log( a ); // Boolean {[[PrimitiveValue]]: true}
+
+var a = new Boolean(-2);
+console.log( a ); // Boolean {[[PrimitiveValue]]: true}
+
+var a = new Boolean(2);
+console.log( a ); // Boolean {[[PrimitiveValue]]: true}
+
+var a = new Boolean(Infinity);
+console.log( a ); // Boolean {[[PrimitiveValue]]: false}
+
+
+/**
+ * OBJETO BOOLEAN
+ * En JS un objeto tipo string es un objeto, no como en otros lenguajes que son arrays de caracteres
+ */
+
+
+var a = new String("Iván");
+console.log( a[0] ); // I funciona, ¿pero no hemos dicho que no es un array?
+console.log( a ); // String {0: "I", 1: "v", 2: "á", 3: "n", length: 4, [[PrimitiveValue]]: "Iván"}
+
+var a = "Iván";
+console.log( a ); // Iván
+
+console.log( a.toUpperCase() );
+console.log( a.toLowerCase() );
+
+var i = a.indexOf("n");
+console.log( i ); // 3
+
+var i = a.indexOf("a");
+console.log( i ); // -1
+
+var a = "nIván";
+var i = a.lastIndexOf("n"); // la primera coincidencia desde el final
+console.log( "La letra está en: ", i ); // 4
 
 
 
