@@ -1,6 +1,7 @@
 /**
  * OBJETO NUMBER
  */
+console.error("OBJETO NUMBER");
 var a = 10;
 var b = Number(10);
 
@@ -45,6 +46,7 @@ console.log( n.valueOf() ); // 20
 /**
  * OBJETO BOOLEAN
  */
+console.error("OBJETO BOOLEAN");
 
 var a = true;
 var b = false;
@@ -65,11 +67,14 @@ var a = new Boolean(Infinity);
 console.log( a ); // Boolean {[[PrimitiveValue]]: false}
 
 
+
+
+
 /**
- * OBJETO BOOLEAN
+ * OBJETO STRING
  * En JS un objeto tipo string es un objeto, no como en otros lenguajes que son arrays de caracteres
  */
-
+console.error("OBJETO STRING");
 
 var a = new String("Iván");
 console.log( a[0] ); // I funciona, ¿pero no hemos dicho que no es un array?
@@ -89,7 +94,96 @@ console.log( i ); // -1
 
 var a = "nIván";
 var i = a.lastIndexOf("n"); // la primera coincidencia desde el final
-console.log( "La letra está en: ", i ); // 4
+console.log( i ); // 4
+
+var a = "Iván Martín Valderas";
+var i = a.lastIndexOf("Martín"); // también sirve con palabras
+console.log( i ); // 5
+
+var numeros = "0123456789";
+var substr = numeros.substr( 6 );
+console.log( substr ); // 6789
+
+var nombre = a.substr( 0, a.indexOf(" ") );
+console.log( nombre ); // Iván
+
+var nombreapellido = a.substr( 0, a.lastIndexOf(" ") );
+console.log( nombreapellido ); // Iván Martín
+
+var split = a.split();
+console.log(split); // ["Iván Martín Valderas"]
+
+var split = a.split(" ");
+console.log(split); // ["Iván", "Martín", "Valderas"]
+console.log(split.length); // 3
+
+
+
+
+
+
+
+
+
+
+/**
+ * OBJETO DATE
+ */
+console.error("OBJETO DATE");
+
+var hoy = new Date();
+console.log( hoy ); // Thu Nov 16 2017 08:24:28 GMT+0100 (Hora estándar romance)
+
+var fechaMilisegundos = new Date( 1 ); // Convierte de milisegundos a fecha
+console.log( fechaMilisegundos ); // Thu Jan 01 1970 01:00:00 GMT+0100 (Hora estándar romance)
+
+var fechaFija = new Date( 2018, 0, 25, 7, 10, 59 ); // anio, mes, dia, hora, min, seg, mili
+// si por ejemplo en la hora ponemos 24, sumará 1 día a la fecha
+console.log( fechaFija ); // Thu Jan 25 2018 07:10:59 GMT+0100 (Hora estándar romance)
+
+console.log( hoy.getFullYear() ); // 2017
+console.log( hoy.getFullYear() +1 ); // 2018
+
+console.log( hoy.getDate() ); // 16 el dia de hoy
+console.log( hoy.getHours() ); // 8 la hora
+console.log( hoy.getMonth() ); // 10 (es 11, noviembre, recordar que empieza en 0)
+console.log( hoy.getTime() ); // 1510818014823 esto es hoy en milisegundos
+
+var ahora = new Date( hoy.getTime() );
+console.log( ahora ); // Thu Nov 16 2017 08:48:31 GMT+0100 (Hora estándar romance)
+
+// Se puede ver el tiempo que tarda en hacer una operación
+var inicio = new Date();
+/* for (let i = 0; i < 15000; i++) {
+    console.log("Algo...");
+} */
+var fin = new Date();
+
+console.log( inicio ); // Thu Nov 16 2017 09:00:08 GMT+0100 (Hora estándar romance)
+console.log( fin ); // Thu Nov 16 2017 09:00:09 GMT+0100 (Hora estándar romance)
+
+var duracion = fin.getTime() - inicio.getTime();
+console.log( (duracion/1000), 'segundos' ); // 1.345 "segundos"
+
+/* momentjs */
+
+
+
+
+
+
+/**
+ * OPERACIONES CON FECHAS
+ */
+
+
+
+
+
+
+
+
+
 
 
 
