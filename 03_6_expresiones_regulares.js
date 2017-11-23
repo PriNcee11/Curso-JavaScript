@@ -79,11 +79,45 @@ var texto3 = "HOla MUndo, 12345.";
 var arr = texto3.match( /[aeiou]/ig ); // vocales tanto mayus como minus
 console.log( arr ); // (4) ["O", "a", "U", "o"]
 
+var textoo = "Hola Mundooooooooo";
+var arr = textoo.match( /o+/g ); // una o y otra cantidad de o (no 1 sólo como elcaso del punto)
+console.log( arr ); // (2) ["o", "ooooooooo"]
+
+var arr = texto.match( /o?/g ); // (hace match aunque el string esté vacío)
+console.log( arr ); // (11) ["", "o", "", "", "", "", "", "", "", "o", ""]
+
+var arr = texto.match( /o*/g ); // cero o más veces (hace match aunque el string esté vacío)
+console.log( arr ); // (11) ["", "o", "", "", "", "", "", "", "", "o", ""]
+
+var arr = textoo.match( /o{2}/ ); // tiene que aparecer 2 veces
+console.log( arr ); // ["oo", index: 9, input: "Hola Mundooooooooo"]
+
+var arr = textoo.match( /o{2,}/ ); // rango: tiene que aparecer al menos 2 veces (de 2 a 4 {2,4})
+console.log( arr ); // ["ooooooooo", index: 9, input: "Hola Mundooooooooo"]
+
+var texto4 = "Holaa mundoo Hoola de nuevooo";
+var arr = texto4.match( /o{2,}/g ); // tiene que aparecer al menos 2 veces con todas las ocurrencias
+console.log( arr ); // (3) ["oo", "oo", "ooo"]
 
 
+var texto5 = "Aeropuerto";
+var arr = texto5.match( /[aeiou]{2,}/ig );
+console.log( arr ); // (2) ["Ae", "ue"]
 
+var texto5 = "Aeropuerto";
+var arr = texto5.match( /\w{2,2}/ig ); // agrupar las letras de 2 en 2
+console.log( arr ); // (5) ["Ae", "ro", "pu", "er", "to"]
 
+var texto6 = "La Respuesta de la suma es: 45 + 60 = 105";
+var arr = texto6.match( /[0-9]{1,}/g ); // quiero obtener los números en sus "bloques" (/\d{1,}/g)
+console.log( arr ); // (3) ["45", "60", "105"]
 
+var arr = texto6.match( /\d{1,}|respuesta/ig ); // lo mismo con la pàlabra respuesta (i para la mayus)
+console.log( arr ); // (4) ["Respuesta", "45", "60", "105"]
+
+/**
+ * https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+ */
 
 
 
