@@ -55,8 +55,8 @@ console.log(jsonProtoString); // {"nombre":"Ainhoa","edad":25}
 var objetoProtoDesdeJson = JSON.parse(jsonProtoString);
 console.log(objetoProtoDesdeJson); // {nombre: "Ainhoa", edad: 25}
 
-
-
+var Persona2 = new Persona(objetoProtoDesdeJson.nombre, objetoProtoDesdeJson.edad);
+console.log(Persona2);
 
 
 
